@@ -18,6 +18,8 @@ docker rmi <imageIDs>	// -f force
 
 # build from Dockerfile from (.) current directory with (-t) tag tagname of repo docker-nodejs
 docker build . -t docker-nodejs:1.0 -t docker-nodejs:(latest)
+eg
+docker build . -t docker-nodejs:1.0 -t docker-nodejs
 
 # list images
 docker images
