@@ -1,0 +1,30 @@
+# search in docker hub for ubuntu
+docker search ubuntu
+
+#pull latest from docker hub or any version optional
+docker pull ubuntu:<version>
+
+#get all containers running
+docker ps
+
+#get all containers
+docker ps -a
+
+#delete containers
+docker rm <containerIDs>	// -f force
+
+#delete images
+docker rmi <imageIDs>	// -f force
+
+# build from Dockerfile from (.) current directory with (-t) tag tagname of repo docker-nodejs
+docker build . -t docker-nodejs:1.0 -t docker-nodejs:latest
+
+# list images
+docker images
+
+run image in repo of latest or imageID (-it) ineractive and terminal and use bash with (-c) command 
+docker run -it -p <hostPort>:<containerPort> <image_ID or repository> bash -c "nodejs server.js"
+eg 
+docker run -t -p 80:8080 docker-nodejs bash -c "nodejs server.js"
+docker run -it ubuntu
+
